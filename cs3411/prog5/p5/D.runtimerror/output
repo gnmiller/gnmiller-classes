@@ -1,0 +1,9 @@
+George Washington, Abraham Lincoln, Thomas Jefferson, Theodore Roosevelt
+
+no compilation errors
+executing
+
+here's some output
+Exception in thread "main" java.lang.NullPointerException
+	at One.main(One.java:15)
+abnormal termination

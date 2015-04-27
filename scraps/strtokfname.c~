@@ -1,0 +1,8 @@
+#include <string.h>
+int main()
+{
+	char* filename = malloc( 128 );
+	strcpy( filename, "/test/test/file");
+	char *tmp = dirname( filename );
+	printf( "%s\n%s\n", filename, tmp );'
+}

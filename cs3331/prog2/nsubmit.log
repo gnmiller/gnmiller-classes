@@ -1,0 +1,49 @@
+Verifying all files before submitting...
+Finished file verification.
+Submitting files...
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/README/README
+diff -e README /local/submit/cs3331/sec01/prog2/gnmiller/README/README 1> /local/submit/cs3331/sec01/prog2/gnmiller/README/V,2 2>/dev/null
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/README/T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/README; tar -xf T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/README; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog2/gnmiller/README/T,tar
+rm -f /local/submit/cs3331/sec01/prog2/gnmiller/README/V,*
+cp README /local/submit/cs3331/sec01/prog2/gnmiller/README/README
+chmod 660 /local/submit/cs3331/sec01/prog2/gnmiller/README/README 
+compress /local/submit/cs3331/sec01/prog2/gnmiller/README/README
+   README
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/main.c/main.c
+diff -e main.c /local/submit/cs3331/sec01/prog2/gnmiller/main.c/main.c 1> /local/submit/cs3331/sec01/prog2/gnmiller/main.c/V,2 2>/dev/null
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/main.c/T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/main.c; tar -xf T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/main.c; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog2/gnmiller/main.c/T,tar
+rm -f /local/submit/cs3331/sec01/prog2/gnmiller/main.c/V,*
+cp main.c /local/submit/cs3331/sec01/prog2/gnmiller/main.c/main.c
+chmod 660 /local/submit/cs3331/sec01/prog2/gnmiller/main.c/main.c 
+compress /local/submit/cs3331/sec01/prog2/gnmiller/main.c/main.c
+   main.c
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/merge.c
+diff -e merge.c /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/merge.c 1> /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/V,2 2>/dev/null
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/merge.c; tar -xf T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/merge.c; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/T,tar
+rm -f /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/V,*
+cp merge.c /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/merge.c
+chmod 660 /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/merge.c 
+compress /local/submit/cs3331/sec01/prog2/gnmiller/merge.c/merge.c
+   merge.c
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/qsort.c
+diff -e qsort.c /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/qsort.c 1> /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/V,2 2>/dev/null
+uncompress /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c; tar -xf T,tar
+cd /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/T,tar
+rm -f /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/V,*
+cp qsort.c /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/qsort.c
+chmod 660 /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/qsort.c 
+compress /local/submit/cs3331/sec01/prog2/gnmiller/qsort.c/qsort.c
+   qsort.c
+   qsort.c
+rm -f gnmiller.submit.ver gnmiller.csmaint.ver

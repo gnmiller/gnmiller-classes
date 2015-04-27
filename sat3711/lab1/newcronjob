@@ -1,0 +1,1 @@
+0 * * * * /home/campus07/gnmiller/classes/sat3711/lab1/ping.sh teamliquid.net > ping.results

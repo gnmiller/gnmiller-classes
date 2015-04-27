@@ -1,0 +1,18 @@
+D.nocompile
+
+did not compile
+     Two.java:5: error: cannot find symbol
+         ublic Two() {
+         ^
+       symbol:   class ublic
+       location: class Two
+     1 error
+p5/D.nocompile
+
+did not compile
+     Two.java:5: error: cannot find symbol
+         ublic Two() {
+         ^
+       symbol:   class ublic
+       location: class Two
+     1 error

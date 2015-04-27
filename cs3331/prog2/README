@@ -1,0 +1,91 @@
+/* 
+ * --------------------------------------------------------
+ * Name: Greg Miller				userID: gnmiller
+ * DUE DATE: 10/17/2014
+ * PROGRAM 3
+ * FILE NAME: README
+ * PURPOSE:
+ * 	The README containing the questions specified for the 
+ * 		assignment.
+ * --------------------------------------------------------
+ */
+
+
+QUESTION 1:
+	This program utilizes shared memory to demonstrate how it can be used
+	for interprocess communication (IPC). We use specific keys based on
+	two identifiers to create our memory and ensure that each process
+	can then find the shared memory. These two identifiers for each process
+	uses a file we know to exist ("./main") and several arbitrarily selected
+	integers defined as macros (ex GNMILLER_KEY_Q XXX). We know that main will
+	exist and that our macros are unique and defined consistently. This method,
+	however, does not protect the shared memory (no usage of IPC_PRIVATE).
+
+QUESTION 2:
+	This program works primarily by using the properties of quick and
+	merge sort as well as how we divide the work.
+
+	With merge sort we are given that the arrays are of unique integers.
+	This allows us to use a third array to sort into. Since each value
+	is unique it will then have a unique index in the sorted array.
+	Since we are only reading from x[] and y[] we avoid race conditions with
+	them. It is possible that there could be a race condition on the output
+	array but since we are given that each value is unique we avoid this, each
+	process will only access a specific index in the array and not affect any
+	other indices that other processes will be accessing.
+
+	With quicksort we ensure that each process only access memory inside its
+	partition of the array (a[left ... right]). Both processes will be
+	concurrently accessing a[] but each will be accessing, what is essentially,
+	a seperate array define as a[left, m-1] and a[m+1, right]. Each process
+	only accesses memory in its respective section. Once exited they are merged,
+	at this point there is no concurrent access to a[] (children are done and
+	main is waiting on the process now accessing a[]) and we can read/write
+	freely to it.
+
+QUESTION 3:
+	shm_qsort: Allocated at the size of a[] (aka k).
+		Then initialized to the values of a[] and subsequently accessed
+		by qsort processes when being sorted.
+
+	shm_merge_x: Allocated the size of x[] (aka m), initialized to x[]
+		then accessed by merge's (the merge created by main) 
+		children (reading only from it)
+
+	shm_merge_y: Allocated the size of y[] (aka n), initialized to y[]
+		then accessed by merge's (the merge created by main) 
+		children (reading only from it)
+
+	shm_merge_o: Allocated to the size of x[]+y[] (m+n). The children of
+		merge (the merge created by main) concurrently write values
+		into the memory at their sorted locations.
+		
+
+QUESTION 4:
+	There are no race conditions in this assignment. We do concurrently access
+	the shared memory across several process, both reading and writing. We do not
+	however read or write to any location concurrently. Each process is given a 
+	subset of the memory and only writes to its subset. Any region of memory
+	that is written to is, either, only accessed by the process reading from
+	that memory subset (as with qsort) or no process is reading from the memory
+	being written until it is known that the writing has completed (as with merge).
+
+QUESTION 5:
+	The arguement list for qsort (from main) is constructed thusly:
+		1. create 3 char*'s to hold the values of left, right, and size
+			(initialized using sprintf())
+		2. create a char** as such
+			char* new_args[5] = { proc_name, left, right, size, NULL }
+		3. call execvp(new_args[0], new_args)
+	As specified by execvp the array is null terminated and as convention
+	specifies argv[0] is the process name.
+
+QUESTION 6:
+	The arguement list for merge (from main) is constructed thusly:
+		1. create two char*'s for the sizes of x and y (initialized using
+				sprintf())
+		2. create a char** as such
+			char* new_args[4] = { proc_name, size_x, size_y, NULL }
+		3. call execvp(new_args[0], new_args)
+	As specified by execvp the array is null terminated and as convention
+	specifies argv[0] is the process name.

@@ -1,0 +1,25 @@
+Greg Miller
+gnmiller
+10/31/14
+PROGRAM 3 README
+
+QUESTION 1:
+	The number of comparisons is n(n-1)/2 and not n^2 because if we were to do 
+n^2 comparisons we would be comparing several values multiple times 
+(redundant).
+
+QUESTION 2:
+	It is entirely possible that several threads will write into the same index
+simultaneously. However, this does not cause a race condition (or other issues).
+This is because all threads are writing the same value (0) into any slot in the
+array. Regardless of it is a 1 or 0 when the value is altered it will become 0
+after the instruction completes. The values are never read, and no process
+relies on their value until after all threads writing into w[] have completed.
+
+QUESTION 3:
+	In general the algorithm holds true when nondistinct integers are presented.
+When presented with nondistinct integers that are not the greatest the algorithm
+detects this appropriately and marks them (as they are less than w[]'s max). When
+the nondistinct values are the largest the algorithm, in this implementation, 
+always selects the second presented value and the first instance will be marked 
+as the largest, when compared to the lesser values the are processed as normal.

@@ -1,0 +1,16 @@
+#!/bin/bash
+# @author Greg Miller
+# @author gnmiller
+# Program 5
+# CS3411
+# Fall 2014
+# sorther.sh
+#
+# Takes an arbitrary number of integer inputs and outputs them
+# in sorted order on a single line.
+# fmt is used to produce the arbitrarily sized string of arguments.
+# sort produces the sorted outputed, and xargs is used to format it
+# onto a single line.
+
+echo "$@" | fmt -s -w 1 | sort -n | xargs
+

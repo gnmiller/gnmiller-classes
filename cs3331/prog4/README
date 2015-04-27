@@ -1,0 +1,68 @@
+// ----------------------------------------------------------- 
+// NAME : Greg Miller                        User ID: gnmiller
+// DUE DATE : 11/14/14                                      
+// PROGRAM 4                                        
+// FILE NAME : README
+// -----------------------------------------------------------
+
+Question 1:
+	The guarantee that only three elves will be asking questions at any time
+is met through the Semaphore Elf. This Semaphore is initialized to 3,
+allowing the first three elves to pass and then blocking subsequent elves. When
+The elves finishing asking their questions they check if they are the last elf
+out and if they are they signal the Elf Semaphore three times.
+
+Question 2:
+	This is met through the use of the Question and Answered Semaphores. The
+elves reach the Question Semaphore and then "ask their question," blocking
+until Santa releases them by answering. Once has has answered he releases the
+elves, who then proceed as above.
+
+Question 3:
+	For an elf to cut in he must be signaled by another elf. This can only 
+occur when Santa signals the Answered Semaphore. When elves are released
+from Answered they decrement a counter (Elf_Count) and then check if they
+were the last (Elf_Count == 0). This variable is protected using a Mutex
+and since all elves block until Elf_Count == 0 on the Elf Semaphore
+we know that only three elves can ever enter the question asking/waking
+Santa phase of execution at a time.
+
+Question 4:
+	Santa only answers questions when he is not sleeping through the Sleeping
+Semaphore. This Semaphore is only signaled by the last reindeer (who checks
+the Reindeer_Count variable and then signals accordingly) or by the third elf
+(who checks the Elf_Count variable and signals accordingly). In this way
+the first 2 elves and the first r-1 reindeer block until the last of either
+set awakens Santa.
+
+Question 5:
+	The last reindeer is always the one to awaken Santa because each reindeer,
+in turn, checks in by incrementing Reindeer_Count and then checks if he was the
+rth reindeer. If he is he awakens Santa by signaling Sleeping. Reindeer_Count is
+protected and the check-out process requires that each reindeer wait for Santa
+to tell them they are done flying, then that he has removed them from the 
+sleigh and they are ready to go back on vacation (block on Reindeer). The
+last reindeer out then notifies that the remaining reindeer can come back from
+vacation eventually by signalling Reindeer).
+
+Question 6:
+	The reindeer utilize a method similar to the roller coaster problem. They 
+notify Santa they are ready to be hitched up by signalling Sleeping to wake him.
+The reindeer then proceed to block on waiting to be hitched up to the sleigh
+using the Sleigh Semaphore. Once Santa has a chance to execute again (if he 
+becomes blocked) he signals the Hitched Semaphore, notifying reindeer that they
+are now going to deliver some toys, they then block, again, until Santa finishes
+delivering the toys and signals the Flying Semaphore. The reindeer then notify
+Santa using the Unhitch Semaphore that they are leaving and going on vacation.
+
+Question 7:
+	Elves may not ask questions while Santa is preparing to deliver or while
+he is delivering toys by the use of the Question Semaphore. When three elves
+arrive and attempt to ask their questions they block on the Question Semaphore.
+Santa always checks who awoke him when he is awoken, if there are r reindeer
+present than, while an Elf may have awoken him (both a Reindeer and Elf 
+signalled Sleeping before Santa was scheduled) he must deliver the toys first
+and ignores the elves until he loops back around (and r reindeer aren't present
+at the time he checks who allowed him to pass the Sleeping Semaphore). It may be
+the case that an Elf awakens Santa but never gets his question answered because
+all the Reindeer consistently beat Santa in being scheduled.

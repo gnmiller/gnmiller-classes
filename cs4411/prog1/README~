@@ -1,0 +1,31 @@
+Greg Miller
+Program 1
+CS4411
+Spring 2015
+1/19/2015
+
+	The design of this program was very straightforward with minimal design 
+decisions. In addition to the NOCALL flag which forces all code to not be
+compiled; all code int <function>(){} is wrapped by #ifndef NOCALL/#def 
+the program also has the GNM_DEBUG flag which toggles printing of a 
+message to notify that the wrapped function has been called and not the 
+original system call.
+
+Included, as specified, is my test program which can be compiled using
+the tstProg directive and executed as tstProg.
+
+	Most important was the decision of how to write the data (0's) over the 
+data of the file specified. To accomplish this I utilized memset( ... ) to 
+create an array sized to be the difference in new length and old length. 
+Then call write( fd for file , array of 0 from memset, old size - new size ).
+For truncate and ftruncate the file size was old - new in unlink it was simply
+the entire size of the file.
+
+Another decision was made in the ftruncate in regards to file descriptors.
+I opted to call dup() on the fd passed in so that I could alter its flags
+without affecting the fd passed in, more specifically so that I could use
+fcntl to set the flags to O_WRONLY without caring about what they were before.
+
+Also of note is that as specified by truncate and ftruncate the file offset
+is returned to what it was when the call was made by storing it and seeking
+back to that index when complete ( int storage = lseek( fd, 0, SEEK_CUR ) ).

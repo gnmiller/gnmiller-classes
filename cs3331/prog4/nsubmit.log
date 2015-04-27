@@ -1,0 +1,64 @@
+Verifying submit request...
+Submit verification completed [y].
+Enforcing expected file list...
+Expected file enforcement completed [y].
+Verifying all files before submitting...
+Finished file verification.
+Submitting files...
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/Makefile
+diff -e Makefile /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/Makefile 1> /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/Makefile; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/V,*
+cp Makefile /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/Makefile
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/Makefile 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/Makefile/Makefile
+   Makefile
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/README/README
+diff -e README /local/submit/cs3331/sec01/prog4/gnmiller/README/README 1> /local/submit/cs3331/sec01/prog4/gnmiller/README/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/README; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/README/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/README/V,*
+cp README /local/submit/cs3331/sec01/prog4/gnmiller/README/README
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/README/README 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/README/README
+   README
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/thread-main.cpp
+diff -e thread-main.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/thread-main.cpp 1> /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/V,*
+cp thread-main.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/thread-main.cpp
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/thread-main.cpp 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread-main.cpp/thread-main.cpp
+   thread-main.cpp
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/thread-support.cpp
+diff -e thread-support.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/thread-support.cpp 1> /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/V,*
+cp thread-support.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/thread-support.cpp
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/thread-support.cpp 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread-support.cpp/thread-support.cpp
+   thread-support.cpp
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/thread.cpp
+diff -e thread.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/thread.cpp 1> /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/V,*
+cp thread.cpp /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/thread.cpp
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/thread.cpp 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread.cpp/thread.cpp
+   thread.cpp
+uncompress /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/thread.h
+diff -e thread.h /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/thread.h 1> /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/V,1 2>/dev/null
+cd /local/submit/cs3331/sec01/prog4/gnmiller/thread.h; chmod 660 V,*; tar -cf T,tar V,*
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/T,tar
+rm -f /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/V,*
+cp thread.h /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/thread.h
+chmod 660 /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/thread.h 
+compress /local/submit/cs3331/sec01/prog4/gnmiller/thread.h/thread.h
+   thread.h
+   thread.h
+rm -f gnmiller.submit.ver gnmiller.csmaint.ver
+clear

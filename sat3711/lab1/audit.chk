@@ -1,0 +1,22 @@
+#!/bin/bash
+# Search a file (audit.log) in the current directory for the string
+# 1 521 1 and output all lines containing it to the file audit.chk
+#
+# If the file is greater than 2K cut the first 2K to a new file
+# (denoted as audit.<daymonthyear>).
+
+#get all lines with the string
+grep "1 521 1" audit.log >> audit.chk
+
+#get the line count
+linecount=`grep "1 521 1" audit.log | wc -l | awk -F ' ' '{ print $1 }'`
+echo $linecount >> audit.chk
+
+#get file size
+filesize=`wc -c audit.log | awk -F ' ' '{ print $1 }'`
+
+#trim off the first 2048...
+if [ $filesize -gt 2048 ]; then
+  head -c 2048 audit.log > audit.`date '+%m%d%y'`
+  tail -c +2049 audit.log > audit.log
+fi

@@ -1,0 +1,42 @@
+Greg Miller -- gnmiller
+CS4411 Spring 15
+Project 2
+
+Due: 2/3/15 09:35
+Submitted: 2/4/15 00:05
+
+Slip Days used: 1
+Slip Days Remaining: 4
+
+File: README
+
+My test cases focused around creating race conditions and then preventing
+them through the monitor to ensure the monitor was maintaining mutual exclusion,
+and generating circumstances where Pa is signalled by Pb and then they attempt
+to gain a shared lock immediately after the Wait/Signal() to ensure that the
+signaller yields.
+
+For testing Condition Variables. Several threads were generated such,
+in most cases, the first set of test threads arrived at a CV.Wait() before the
+a second set arrived at a CV.Signal() to ensure that processes were signalled
+and were able to continue executing at some time in the future.
+
+To ensure that the caller yields the monitor I designed a simple test with 
+two threads. P1 waits on a CV, P2 signals that CV and immediately attempts
+to acquire the Monitor and then printf(). P1 does a similiar task, 
+immediately attempting to gain the monitor once the signal is received. 
+If P2 yields the CPU, as the results indicated it did, then P1 will print 
+first in every execution.
+
+Lastly to test Mutual Exclusion a large number of threads were generated that
+share a single integer. Half add 1, half sub 1. The expected result is 0, if
+any violation of ME occured then the result would be non0.
+
+To test refstats I used all the test cases provided in various combinations as
+well as generated several lists of random IPs with varying ranges (mixes of valid
+and invalid and completely invalid or valid).
+
+
+Other notes:
+Included is helper.h and helper.cc which contain several class and function
+definitions to aid in parsing the logs.

@@ -1,0 +1,16 @@
+Verifying submit request...
+Submit verification completed [y].
+Verifying all files before submitting...
+Finished file verification.
+Submitting files...
+cp client.c /local/submit/cs3411/sec1/prog4r2/gnmiller/client.c/client.c
+chmod 660 /local/submit/cs3411/sec1/prog4r2/gnmiller/client.c/client.c 
+compress /local/submit/cs3411/sec1/prog4r2/gnmiller/client.c/client.c
+   client.c
+cp server.c /local/submit/cs3411/sec1/prog4r2/gnmiller/server.c/server.c
+chmod 660 /local/submit/cs3411/sec1/prog4r2/gnmiller/server.c/server.c 
+compress /local/submit/cs3411/sec1/prog4r2/gnmiller/server.c/server.c
+   server.c
+   server.c
+rm -f gnmiller.submit.ver gnmiller.csmaint.ver
+clear
