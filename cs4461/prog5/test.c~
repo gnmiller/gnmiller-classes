@@ -1,0 +1,10 @@
+typedef struct
+{
+	unsigned char cd :1;
+} test_struct;
+
+int main()
+{
+	test_struct ts = malloc( sizeof( test_struct ) );
+	exit(0);
+}

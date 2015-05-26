@@ -1,0 +1,7 @@
+Netalyzer:
+
+ID: 43ca253f-31294-3e5febe8-1287-48bd-b700
+
+1) First I looked at the network buffering testas it indicated issues with my upstream. The results indicateed that certain activities (ex uploading large files and browsing the web) could cause latency problems. I found this to be particularly interesting because recently I have been experiencing ISP issues directly related to the tasks the test indicated might cuase problems.
+
+2) I also looked at the DNS glue section as it also indicated a warning. Specifically that the DNS server (Google DNS) follows all CNAMEs regardless of their location. After furhter reading I discovered why this is the case. It is due to a policy by the DNS to chase down records and ensure that they originated from a proper nameserver, and to do so very aggresively.

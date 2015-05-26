@@ -1,0 +1,31 @@
+5)
+A,B,C)
+Tracing route to bbc.co.uk [212.58.246.103]
+over a maximum of 30 hops:
+
+  1    41 ms    22 ms     8 ms  10.175.96.1 
+  2     8 ms    10 ms     9 ms  acr01hgtnmi-tge-0-7-0-7.hgtn.mi.charter.com [96.34.17.250] --- Charter Communications Operating, LLC (Houghton, MI)
+  3    14 ms    11 ms    10 ms  acr01irwdmi-tge-0-7-0-1.irwd.mi.charter.com [96.34.17.171] --- Charter Communications Operating, LLC (Onalaska, WI)
+  4    11 ms    13 ms    16 ms  dtr02rhnlwi-bue-1.rhnl.wi.charter.com [96.34.16.250] --- Charter Communications Operating, LLC (Sheboygan, WI)
+  5    22 ms    23 ms    24 ms  crr02euclwi-bue-7.eucl.wi.charter.com [96.34.17.32] --- Charter Communications Operating, LLC (Waunakee, WI)
+  6    25 ms    24 ms    22 ms  bbr02euclwi-bue-4.eucl.wi.charter.com [96.34.2.6] --- Charter Communications Operating, LLC (Eau Claire, WI)
+  7    16 ms    24 ms    24 ms  bbr01euclwi-bue-5.eucl.wi.charter.com [96.34.0.6] --- Charter Communications Operating, LLC
+  8     *       27 ms    60 ms  6-2-10.ear2.Chicago2.Level3.net [4.59.28.125] --- Level 3 Communications, Inc (Chicago, IL)
+  9   124 ms   118 ms   113 ms  ae-229-3605.edge4.London1.Level3.net [4.69.166.17] --- Level 3 Communications, Inc (New York, NY)
+ 10   113 ms   118 ms   113 ms  ae-229-3605.edge4.London1.Level3.net [4.69.166.17] --- Level 3 Communications, Inc (New York, NY)
+ 11   114 ms   115 ms   114 ms  BBC-TECHNOL.edge4.London1.Level3.net [212.113.14.222] --- Level 3 Communications, Inc (London, Greater London, UK)
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14   117 ms   114 ms   120 ms  ae0.er02.cwwtf.bbc.co.uk [132.185.254.90] --- British Broadcasting Corporation (New York, NY)
+ 15   114 ms   117 ms   115 ms  132.185.255.165 (British Broadcasting Corporation) --- British Broadcasting Corporation(New York, NY)
+ 16   120 ms   120 ms   119 ms  fmt-vip132.cwwtf.bbc.co.uk [212.58.246.103] --- British Broadcasting Corporation(London, Greater London, UK)
+
+Trace complete.
+
+D)
+	The largest delay was introduced during the hop from Chicago to New York. I would have guessed it would occur hopping from the US (likely in NY) going out
+to the UK as that would certainly be the longest by distance (~4x larger distance).
+
+E)
+	tracert continues to send data when a router doesn't respond because that node is usually still traversed by the packet. The node in question
+may have ping response disabled, or not responded for some other reason but still received, and transmitted the data.
