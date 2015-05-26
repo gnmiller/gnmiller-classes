@@ -1,0 +1,15 @@
+INDEX VERSION 1.127+/home/campus07/gnmiller/classes/.metadata/.plugins/org.eclipse.jdt.core
+2652425623.index
+2031376517.index
+3887966837.index
+3281120082.index
+1492940232.index
+1177651864.index
+4115497618.index
+995127796.index
+924633034.index
+2226766458.index
+1622219871.index
+491797603.index
+2530172304.index
+4208590904.index

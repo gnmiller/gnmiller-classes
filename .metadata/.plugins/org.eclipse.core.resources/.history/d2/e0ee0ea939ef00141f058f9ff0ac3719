@@ -1,0 +1,13 @@
+package tmpProj;
+import java.math.*;
+
+public class main_class {
+	public static void main ( String[] args ){
+		BigDecimal d = new BigDecimal( 1 );
+		while( true )
+		{
+			d = d.divide(new BigDecimal( .3 ));
+			System.out.println( d.toString() + "\n" );
+		}
+	}
+}
