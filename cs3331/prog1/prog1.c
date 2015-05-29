@@ -43,7 +43,7 @@ int main(int argc, char** argv){
 
 	if(argc!=5){
 		
-		buf = "Invalid # of characters in the arguments.\n";
+		buf = "Usage: prog1 <# of ints to heapsort> <fibonacci> <buffons needle> <integrate sin>\nBuffons needle will be computed the specified number of times\nThe integral of the sin() will be computed the specified number of times.\n";
 		write(STDOUT_FILENO,buf,strlen(buf));
 		return -1;
 		

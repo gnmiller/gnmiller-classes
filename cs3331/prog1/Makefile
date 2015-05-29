@@ -3,7 +3,7 @@ CFLAGS=-std=c99 -ggdb3 -Wall
 LDFLAGS=
 .PHONY: all clean distclean
 
-all: 
+all: prog1 
 
 prog1:
 	$(CC) $(CFLAGS) prog1.c -lm -o prog1
