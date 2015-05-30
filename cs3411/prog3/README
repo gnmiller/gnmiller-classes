@@ -1,0 +1,4 @@
+Create a conceptual ring of processes that pass messages around.
+Ring constructs the circle of proceses and llink is the actual binary that the linked processes execute.
+
+More or less a demonstration of the pipe() system call.

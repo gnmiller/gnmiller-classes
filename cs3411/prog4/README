@@ -1,0 +1,5 @@
+A NONTURN BASED implementation of a number guessing game.
+The server waits for 2 clients and then the game begins. Each player may guess as quickly as they want.
+The sockets used by the server are nonblocking while the clients are blocking. After any guess the server transmits the current
+state out to the clients.
+

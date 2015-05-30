@@ -1,4 +1,5 @@
 #!/bin/bash
+#clears out any shared memory segments held by the currently executing user
 
 ME=`whoami`
 

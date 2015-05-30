@@ -1,0 +1,11 @@
+A series of bash scripts with various goals.
+
+display - Mimics the tree linux command with some differences.
+sorter - Sorts a list of numbers taken  input on the command line.
+grader - An automated grader script. Expects a directory with specific contents as input.
+	Depending on the input various errors are output, if all the requirements are met
+	the Java application is compiled and executed. The output of the Java program is 
+	printed along with any warnings or errors from the compiler.
+	
+	An example of some of the possible inputs can be seen in p5 directory.
+	Executing grader p5/(any directory) will execute the script on the directory.

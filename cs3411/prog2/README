@@ -1,0 +1,2 @@
+Mimics C malloc/free through the usage of a file to manage the memory segments as allocated.
+Semifunctional. Packing into the file does not always work correctly causing unpacking/reading/etc to fail as well.

@@ -1,3 +1,6 @@
+NONWORKING SOLUTION
+FIX ME SOMETIME!!
+
 1 The logic of your program
 The logic of the program is that each thread waits for its neighbors (up and left) to pass it a value through their channel. It then computers the new stored value and waits for EOD or the next value.
 Upon EOD the thread passes EOD on and terminates after writing its final computer value.
