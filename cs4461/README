@@ -1,0 +1,8 @@
+prog1: Check the endian-ness of a system and report it. Then reverse DNS lookup the address specified on STDIN.
+prog2: Make a static HTTP request to a server for the address <server address>/ (eg index.html in most cases)
+prog3: A simple HTTP server that automatically responds to any request with the index.html file in the same directory. 
+    Was initially specified to only require 1 connection but was later modified to include pthreads to allow (theoretically) infinite concurrent connections
+prog4: An implementation of a connection based protocol (like TCP) implemented using UDP packets. Does not work in all cases on all systems.
+prog5: Similar to prog1 but instead of recursively querying DNS servers the application starts at the root node and queries from those responses.
+    Only partially works. The recursive query portion is unworking, the application currently retrieves the response from the normal DNS, parses the packet and outputs
+    the results to STDOUT.
