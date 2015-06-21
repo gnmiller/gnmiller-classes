@@ -1,3 +1,10 @@
+This was an exercise designed to demonstrate concurrent programming in a simple way. A parent executes some setup code and then forks
+into several child processes. Each child computes some algorithm; in no particular order they are the buffon's needle problem,
+the nth fibonacci, a heapsort of n random numbers (using rand()) and an algorithm for computing integrals.
+
+Aside from demonstrating how concurrency works this also demonstrates how the big O of a child can significantly affect the parent.
+
+--- Original Content Preserved ---
 Greg Miller
 CS3331
 Fall 2014
