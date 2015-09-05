@@ -17,10 +17,11 @@ workdir="\[$red\]\w\[$clear\]"
 
 # set color and $/# based on EUID
 if [ $EUID == 0 ]; then
-	prompt="\[$bred\]\$"
+	prompt="\[$bred\]"
 else 
-	prompt="\[$byellow\]\$"
+	prompt="\[$byellow\]"
 fi
+prompt=$prompt'\$'
 prompt="$prompt\[$clear\]"
 
 export PS1="[$userhost][$curtime][$workdir]\n$prompt "
