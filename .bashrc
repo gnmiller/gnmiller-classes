@@ -25,3 +25,4 @@ prompt=$prompt'\$'
 prompt="$prompt\[$clear\]"
 
 export PS1="[$userhost][$curtime][$workdir]\n$prompt "
+alias ls='ls -lah'
